@@ -1,0 +1,4 @@
+robotframework
+selenium
+requests
+robotframework-requests
