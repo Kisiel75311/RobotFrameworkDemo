@@ -13,7 +13,6 @@ ${PASSWORD}       password123
 
 *** Test Cases ***
 Get User List Should Return 200 And Contains Data
-    Create Session    reqres    ${BASE_URL}
     ${response}=      GET On Session    reqres    /users    params=page=1
     Should Be Equal As Strings    ${response.status_code}    200
     Dictionary Should Contain Key    ${response.json()}    data
@@ -32,6 +31,7 @@ Login Should Return 200 And Token
 
 *** Keywords ***
 Set Up Suite
+    Create Session    reqres    ${BASE_URL}
     Log    SetUp done
 
 Tear Down Suite
