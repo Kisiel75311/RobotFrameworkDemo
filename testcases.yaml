@@ -1,0 +1,4 @@
+testcases:
+  - "Get User List Should Return 200 And Contains Data"
+  - "Update User Should Return 200"
+  - "Login Should Return 200 And Token"
